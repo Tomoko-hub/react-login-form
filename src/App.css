@@ -1,38 +1,86 @@
-.App {
+body {
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  overflow-y: hidden;
+}
+
+.formContainer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.formContainer form {
+  background-color: #f8ecec;
+  width: 70%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #efefef;
+  box-shadow: 10px 4px 16px 4px #777777;
+  border-radius: 18px;;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.uiForm {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  height: 400px;
 }
 
-.App-link {
-  color: #61dafb;
+.formField {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.formField input {
+  border: 1px solid gray;
+  padding:  20px;
+  border-radius: 4px;
+}
+
+.formField input:focus {
+  outline: none;
+}
+
+.formField label {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+button {
+  width: 100%;
+  background-color: rgba(35, 35, 242, 0.727); 
+  border-radius: 5px;
+  border: none;
+  padding: 20px 30px;
+  color: #efefef;
+  font-size: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: rgba(26, 26, 175, 0.727);
+}
+
+.errorMessage {
+  color: red;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.messageSuccess {
+  color: green;
+  margin-top: 15px;
 }
